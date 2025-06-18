@@ -1,0 +1,242 @@
+.index_customer_box {
+    width: 100%;
+    height: auto;
+    padding: 80px 0;
+    background: url(https://fujacn.usa18.wondercdn.com/public/static/images/home/en-us/index_customer_bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.contentWH {
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.index_customer_title {
+    width: 100%;
+    height: auto;
+}
+
+.index_customer_title h4 {
+    font-size: 72px;
+    color: #fff;
+    font-family: "Lato-Bold";
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+.index_customer_title p {
+    font-family: "Lato-Bold";
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+}
+
+.index_customer_title a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 258px;
+    height: 49px;
+    margin: 30px auto 0;
+    padding-left: 6px;
+    font-size: 18px;
+    font-family: "Lato-Light";
+    color: #c50a27;
+    background: url(https://fujacn.usa18.wondercdn.com/public/static/images/home/en-us/index_customer_bg.png) no-repeat center center;
+    background-size: 100% auto;
+    transition: all 0.6s;
+    text-decoration: none;
+}
+
+.index_customer_title a img {
+    margin-left: 10px;
+    transition: all 0.6s;
+}
+
+.index_customer_title a:hover img {
+    transform: translateX(10px);
+}
+
+.index_customer_ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 50px;
+    padding: 0;
+}
+
+.index_customer_ul li {
+    width: calc(25% - 15px);
+    border-radius: 10px;
+    background: #FFFFFF;
+    overflow: hidden;
+    margin-top: 0;
+    padding: 21.5px;
+    box-sizing: border-box;
+}
+
+.index_customer_ul li h4 {
+    font-size: 22px;
+    color: #333;
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 19px 0 6px;
+}
+
+.index_customer_ul li h5 {
+    width: 146px;
+    height: 25px;
+    margin: 0 0 6px;
+    color: #fff;
+    background: #c50a27;
+    border-radius: 3px;
+    font-weight: normal;
+    text-align: center;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.index_customer_ul li span {
+    display: block;
+    margin-top: 0px;
+    font-size: 14px;
+    color: #b2b2b2;
+}
+
+.index_customer_ul li img {
+    display: block;
+    margin-top: 8px;
+    max-width: 100%;
+    vertical-align: top;
+}
+
+.index_customer_ul li p {
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 35px;
+}
+
+.index_customer_ul li strong {
+    display: block;
+    margin-top: 15px;
+    font-weight: normal;
+    color: #c50a27;
+    text-decoration: underline;
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contentWH {
+        width: 90%;
+    }
+
+    .index_customer_ul {
+        gap: 16px;
+    }
+
+    .index_customer_ul li {
+        width: calc(33.333% - 11px);
+    }
+
+    .index_customer_title h4 {
+        font-size: 52px;
+    }
+
+    .index_customer_title p {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .contentWH {
+        width: 95%;
+    }
+
+    .index_customer_title h4 {
+        font-size: 42px;
+    }
+
+    .index_customer_title p {
+        font-size: 18px;
+    }
+
+    .index_customer_title a {
+        width: 200px;
+        height: 44px;
+        font-size: 16px;
+    }
+
+    .index_customer_ul {
+        gap: 16px;
+    }
+
+    .index_customer_ul li {
+        width: calc(50% - 8px);
+        padding: 18px;
+    }
+
+    .index_customer_ul li p {
+        font-size: 14px;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contentWH {
+        width: 95%;
+        padding: 0 10px;
+    }
+
+    .index_customer_title h4 {
+        font-size: 30px;
+    }
+
+    .index_customer_title p {
+        font-size: 15px;
+    }
+
+    .index_customer_title a {
+        width: 180px;
+        height: 42px;
+        font-size: 15px;
+    }
+
+    .index_customer_ul {
+        display: flex;
+        flex-direction: column !important; /* FORCE column layout */
+        gap: 20px;
+        margin-top: 25px;
+    }
+
+    .index_customer_ul li {
+        width: 100% !important; /* FORCE full width card */
+        padding: 14px;
+    }
+
+    .index_customer_ul li h4 {
+        font-size: 18px;
+    }
+
+    .index_customer_ul li h5 {
+        width: 100%;
+        font-size: 13px;
+        height: auto;
+        line-height: 20px;
+        padding: 4px 0;
+    }
+
+    .index_customer_ul li p {
+        margin-top: 15px;
+        font-size: 13px;
+    }
+}

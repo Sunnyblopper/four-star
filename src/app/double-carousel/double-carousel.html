@@ -1,0 +1,37 @@
+<div class="index_product_box">
+  <div class="index_product_list">
+    <div class="contentWH">
+      <div class="index_product_list_content">
+        
+        <!-- Image Slider (Now on Left) -->
+        <div class="index_product_list_content_right wow slideInLeft">
+          <div class="swiper-button-next index_product_list_content_right_sw_right index_product_list_content_right_sw_right1"></div>
+          <div class="swiper-button-prev index_product_list_content_right_sw_left index_product_list_content_right_sw_left1"></div>
+
+          <div class="swiper-container index_product_list_content_right_sw index_product_list_content_right_sw1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" *ngFor="let product of products">
+                <a [href]="product.Link" target="_blank" rel="noopener">
+                  <div class="index_product_list_content_right_sw_bg">
+                    <img [alt]="product.Name" [src]="product.Image" />
+                  </div>
+                  <h4>{{ product.Name }}</h4>
+                  <span>Learn more</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text Content (Now on Right) -->
+        <div class="index_product_list_content_left wow slideInRight">
+          <h4>Multi Heads Embroidery Machine</h4>
+          <p>
+           Heavy duty multi heads machine with full servo motors and double beams is born for mass production and suitable for industrial embroidery business.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

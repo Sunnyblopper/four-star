@@ -1,0 +1,65 @@
+<div class="content">
+    <div class="product_hot_box"></div>
+
+    <!-- Breadcrumb Section -->
+    <div class="crumbs_box black">
+        <div class="contentWH">
+            <ul>
+                <i>
+                    <img src="https://fujacn.usa18.wondercdn.com/public/static/images/home/en-us/cur_ico1.png"
+                        alt="home icon" />
+                </i>
+                <li>
+                    <a routerLink="/">
+                        <span itemprop="name">Home</span>
+                    </a>
+                </li>
+                <li>&raquo;</li>
+                <li>
+                    <a [routerLink]="['/machine', category]">
+                        <span>{{ category | titlecase }} Embroidery Machines</span>
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Product List -->
+    <div class="product_content_box">
+        <div class="contentWH">
+            <div class="product_content_title">
+                <h1>{{ category | titlecase }} Embroidery Machines</h1>
+            </div>
+
+            <ul class="product_content_ul">
+                <li *ngFor="let product of paginatedProducts" class="new_products">
+                    <div class="product_content_ul_img">
+                        <a [href]="product.Link" target="_blank">
+                            <img [src]="product.Image" [alt]="product.title" />
+                        </a>
+                    </div>
+                    <h4>
+                        <a [href]="product.Link" target="_blank">{{ product.Name }}</a>
+                    </h4>
+                    <a [href]="product.Link" target="_blank" class="inquire">
+                        <img src="https://fujacn.usa18.wondercdn.com/public/static/images/home/en-us/product_email_ico.png"
+                            alt="Inquiry icon" />
+                        Inquiry
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="pagination-button" [disabled]="currentPage === 1" (click)="prevPage()">
+                    Back
+                </button>
+                <span class="pagination-info">Page {{ currentPage }} of {{ totalPages }}</span>
+                <button class="pagination-button" [disabled]="currentPage === totalPages" (click)="nextPage()">
+                    Next
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

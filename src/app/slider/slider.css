@@ -1,0 +1,48 @@
+.banner {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.index_banner_swiper,
+.index_banner_swiper_bg {
+  width: 100%;
+}
+
+.index_banner_swiper_bg img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.index_banner_page span {
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  display: inline-block;
+  margin: 0 4px;
+  border-radius: 50%;
+}
+
+.index_banner_page span.swiper-pagination-bullet-active {
+  background: rgba(0, 51, 124, 0.9);
+}
+
+@media (max-width: 768px) {
+  .index_banner_swiper_content {
+    bottom: 20px;
+    padding: 8px 16px;
+  }
+
+  .index_banner_swiper_content a {
+    font-size: 16px;
+    width: 160px;
+    height: 40px;
+  }
+
+  .index_banner_swiper_content a img {
+    width: 16px;
+    height: 16px;
+  }
+}

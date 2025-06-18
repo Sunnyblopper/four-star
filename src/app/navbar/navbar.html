@@ -1,0 +1,72 @@
+<div class="header_bottom">
+  <div class="contentWH">
+    <div class="header_bottom_content">
+
+      <!-- Logo -->
+      <div class="header_bottom_content_left">
+        <a routerLink="/">
+          <img src="/assets/FOUR STAR ENTERPRISES.png" class="img-fluid" height="50%"
+            alt="Shenzhen Fuja Machinery Co., Ltd." />
+        </a>
+      </div>
+
+      <!-- Navigation -->
+      <ul class="nav_box" [class.show]="isMenuOpen">
+        <li [class.on]="activeMenu === 'home'" (click)="setActiveMenu('home')">
+          <a routerLink="/" class="nav_link_first">Home</a>
+        </li>
+
+        <li [class.on]="activeMenu === 'machines'" (click)="setActiveMenu('machines')">
+         <span class="nav_link_first">Machines</span>
+          <div class="nav_list_box">
+
+            <!-- Main categories -->
+            <a routerLink="/machines/single_head">Single Head Embroidery Machines</a>
+            <a routerLink="/machines/double_head">Double Head Embroidery Machines</a>
+            <a routerLink="/machines/multifunctional">Multifunctional Embroidery Machines</a>
+            <a routerLink="/machines/chain_stitch">Chain Stitch Embroidery Machines</a>
+
+            <!-- Subcategories -->
+            <div class="nested-dropdown">
+              <a href="javascript:void(0);" class="parent-link">Multi Head Embroidery Machines</a>
+              <div class="nested-content">
+                <a routerLink="/machines/multi3_head">3 Head</a>
+                <a routerLink="/machines/multi4_head">4 Head</a>
+                <a routerLink="/machines/multi6_head">6 Head</a>
+                <a routerLink="/machines/multi8_head">8 Head</a>
+              </div>
+            </div>
+
+            <div class="nested-dropdown">
+              <a href="javascript:void(0);" class="parent-link">More Products</a>
+              <div class="nested-content">
+                <a routerLink="/machines/1-1Head">1+1 Head</a>
+                <a routerLink="/machines/1_head">1 Head</a>
+                <a routerLink="/machines/3_head">3 Head</a>
+                <a routerLink="/machines/4_head">4 Head</a>
+                <a routerLink="/machines/6_head">6 Head</a>
+              </div>
+            </div>
+
+          </div>
+        </li>
+
+        <li [class.on]="activeMenu === 'videos'" (click)="setActiveMenu('videos')">
+          <a routerLink="/video-gallery.html" class="nav_link_first">Videos</a>
+        </li>
+
+        <li [class.on]="activeMenu === 'contact'" (click)="setActiveMenu('contact')">
+          <a routerLink="/contact-us.html" class="nav_link_first">Contact Us</a>
+        </li>
+      </ul>
+
+      <!-- Mobile menu toggle -->
+      <div class="hd_btn" (click)="toggleMenu()" [class.on]="isMenuOpen">
+        <span class="s1"></span>
+        <span class="s2"></span>
+        <span class="s3"></span>
+      </div>
+
+    </div>
+  </div>
+</div>

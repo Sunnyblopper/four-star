@@ -1,0 +1,19 @@
+<div class="index_about_number_box">
+  <div class="contentWH">
+    <ul class="index_about_number_ul">
+      <li *ngFor="let item of stats">
+        <div class="index_about_number_ul_left">
+          <img [src]="item.icon" [alt]="item.alt" />
+        </div>
+        <div class="index_about_number_ul_right">
+          <h4>
+            <ng-container *ngIf="item.prefix">{{item.prefix}}</ng-container>
+            <span class="counter">{{ item.value }}</span>
+            <ng-container *ngIf="item.suffix">{{item.suffix}}</ng-container>
+          </h4>
+          <p>{{ item.label }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

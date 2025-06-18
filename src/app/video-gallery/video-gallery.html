@@ -1,0 +1,30 @@
+<div class="video_box">
+  <div class="container">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col_lg_6">
+        <div class="submenu_wrap">
+          <h2>Videos</h2>
+          <ul>
+            <!-- Optional: Add dynamic categories here -->
+          </ul>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="col_lg_18">
+        <h1 class="video_bt">Videos</h1>
+        <div class="videoListBox">
+          <div
+            class="video-item"
+            *ngFor="let video of videos"
+          >
+            <a [href]="video.url" target="_blank">
+              <img [src]="video.img" [alt]="video.alt" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

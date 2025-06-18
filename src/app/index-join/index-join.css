@@ -1,0 +1,120 @@
+.index_join_box {
+    width: 100%;
+    height: auto;
+    background: url(/assets/img1.jpg);
+    background-size: cover;
+    padding: 80px 0; 
+    box-sizing: border-box;
+}
+
+.contentWH {
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.index_join_ul {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 0;
+}
+
+.index_join_ul li {
+    width: 23.3%;
+    border-radius: 50px;
+    background: #222;
+    box-shadow: 0px 0px 43px 0px rgba(4, 0, 0, 0.22);
+    padding: 68px 30px 110px 30px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    list-style: none;
+}
+
+.index_join_ul_content_ico {
+    width: 118px;
+    height: 118px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #c50a27;
+}
+
+.index_join_ul_content_ico img {
+    width: 44%;
+    height: auto;
+    display: block;
+}
+
+.index_join_ul li h4 {
+    font-size: 20px;
+    color: #FFFFFF;
+    font-family: "Lato-Semibold";
+    text-align: center;
+    font-weight: normal;
+    line-height: 30px;
+    margin-top: 40px;
+    max-height: 60px;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+    .index_join_ul {
+        flex-wrap: wrap;
+        margin-top: 0px;
+    }
+
+    .index_join_ul li {
+        width: 48.5%;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .index_join_box {
+        padding: 8vw 4vw;
+    }
+
+    .index_join_ul li {
+        margin-top: 5.8vw;
+        border-radius: 4vw;
+        padding: 5.8vw 4%;
+        width: 100%;
+    }
+
+    .index_join_ul li h4 {
+        font-size: 3.6vw;
+        line-height: 5.8vw;
+        margin-top: 3.8vw;
+    }
+
+    .index_join_ul_content_ico {
+        width: 18vw;
+        height: 18vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .index_join_box {
+        padding: 10vw 5vw;
+    }
+
+    .index_join_ul li {
+        padding: 6vw 5vw 10vw 5vw;
+        border-radius: 6vw;
+    }
+
+    .index_join_ul_content_ico {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .index_join_ul li h4 {
+        font-size: 4vw;
+        line-height: 6vw;
+    }
+}

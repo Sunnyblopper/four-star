@@ -1,0 +1,15 @@
+<div class="index_join_box">
+    <div class="contentWH">
+        <ul class="index_join_ul">
+            <li *ngFor="let item of joinItems">
+                <div class="index_join_ul_content_ico">
+                    <img [src]="item.icon" alt="icon" />
+                </div>
+
+                <h4 *ngIf="item.isHtml" [innerHTML]="item.title"></h4>
+
+                <h4 *ngIf="!item.isHtml">{{ item.title }}</h4>
+            </li>
+        </ul>
+    </div>
+</div>
