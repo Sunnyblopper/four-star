@@ -6,6 +6,7 @@ import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 
 Swiper.use([Navigation]);
+
 @Component({
   selector: 'app-double-carousel',
   imports: [CommonModule],
@@ -41,13 +42,13 @@ export class DoubleCarousel implements OnInit {
   }
 
   initSwiper(): void {
-    new Swiper('.index_product_list_content_right_sw1', {
+    new Swiper('.double-swiper-container', {
       slidesPerView: 2,
       spaceBetween: 20,
-      loop: false, // ✅ Optional: set to true if you want it to wrap around
+      loop: false,
       navigation: {
-        nextEl: '.index_product_list_content_right_sw_right1',
-        prevEl: '.index_product_list_content_right_sw_left1',
+        nextEl: '.double-swiper-button-next',
+        prevEl: '.double-swiper-button-prev',
       },
       breakpoints: {
         0: {
