@@ -10,10 +10,9 @@ Swiper.use([Navigation]);
   selector: 'app-double-carousel',
   imports: [CommonModule],
   templateUrl: './double-carousel.html',
-  styleUrl: './double-carousel.css'
+  styleUrl: './double-carousel.css',
 })
-export class DoubleCarousel implements OnInit{
-
+export class DoubleCarousel implements OnInit {
   products: any[] = [];
 
   constructor(private http: HttpClient, private ngZone: NgZone) {}
@@ -23,8 +22,9 @@ export class DoubleCarousel implements OnInit{
   }
 
   loadCSV(): void {
-    this.http.get('assets/machines/multifunctional.csv', { responseType: 'text' })
-      .subscribe(data => {
+    this.http
+      .get('assets/machines/multifunctional.csv', { responseType: 'text' })
+      .subscribe((data) => {
         Papa.parse(data, {
           header: true,
           skipEmptyLines: true,
@@ -35,7 +35,7 @@ export class DoubleCarousel implements OnInit{
                 this.initSwiper();
               });
             }, 100);
-          }
+          },
         });
       });
   }
@@ -44,19 +44,19 @@ export class DoubleCarousel implements OnInit{
     new Swiper('.index_product_list_content_right_sw1', {
       slidesPerView: 2,
       spaceBetween: 20,
+      loop: false, // ✅ Optional: set to true if you want it to wrap around
       navigation: {
         nextEl: '.index_product_list_content_right_sw_right1',
         prevEl: '.index_product_list_content_right_sw_left1',
       },
       breakpoints: {
         0: {
-          slidesPerView: 1
+          slidesPerView: 1,
         },
         768: {
-          slidesPerView: 2
-        }
-      }
+          slidesPerView: 2,
+        },
+      },
     });
   }
-
 }

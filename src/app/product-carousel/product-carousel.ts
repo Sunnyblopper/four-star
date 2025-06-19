@@ -44,11 +44,20 @@ export class ProductCarousel implements OnInit {
     new Swiper('.index_product_list_content_right_sw1', {
       slidesPerView: 2,
       spaceBetween: 20,
+      loop: false, // change to true if you want wrap-around
       navigation: {
         nextEl: '.index_product_list_content_right_sw_right1',
         prevEl: '.index_product_list_content_right_sw_left1',
       },
-      autoplay: false,
+      autoplay: false, // ✅ No auto sliding
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+      },
     });
   }
 }
