@@ -6,14 +6,13 @@ import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 Swiper.use([Navigation]);
 
-
 @Component({
   selector: 'app-product-carousel',
   imports: [CommonModule],
   templateUrl: './product-carousel.html',
-  styleUrl: './product-carousel.css'
+  styleUrl: './product-carousel.css',
 })
-export class ProductCarousel implements OnInit{
+export class ProductCarousel implements OnInit {
   products: any[] = [];
 
   constructor(private http: HttpClient, private ngZone: NgZone) {}
@@ -23,20 +22,22 @@ export class ProductCarousel implements OnInit{
   }
 
   loadCSV() {
-    this.http.get('assets/machines/single_head.csv', { responseType: 'text' }).subscribe(data => {
-      Papa.parse(data, {
-        header: true,
-        skipEmptyLines: true,
-        complete: (result) => {
-          this.products = result.data as any[];
-          setTimeout(() => {
-            this.ngZone.runOutsideAngular(() => {
-              this.initSwiper();
-            });
-          }, 100);
-        }
+    this.http
+      .get('assets/machines/single_head.csv', { responseType: 'text' })
+      .subscribe((data) => {
+        Papa.parse(data, {
+          header: true,
+          skipEmptyLines: true,
+          complete: (result) => {
+            this.products = result.data as any[];
+            setTimeout(() => {
+              this.ngZone.runOutsideAngular(() => {
+                this.initSwiper();
+              });
+            }, 100);
+          },
+        });
       });
-    });
   }
 
   initSwiper() {
@@ -47,6 +48,7 @@ export class ProductCarousel implements OnInit{
         nextEl: '.index_product_list_content_right_sw_right1',
         prevEl: '.index_product_list_content_right_sw_left1',
       },
+      autoplay: false,
     });
   }
 }
