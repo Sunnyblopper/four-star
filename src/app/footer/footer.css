@@ -122,12 +122,6 @@
     margin-bottom: 5px;
 }
 
-.address-line span a {
-    text-decoration: none;
-    opacity: 1;
-    color: #FFFFFF;
-}
-
 .address-line span:first-child {
     width: 84px;
     display: block;
@@ -282,7 +276,10 @@
         padding-top: 10px;
     }
 
-    
+    .footer_content_right:before {
+        position: absolute;
+        top: 58px;
+    }
 
     .footer_content_right_left {
         width: 100%;
@@ -345,6 +342,12 @@
     .footer_logo {
         width: 130px;
     }
+
+    .footer_content_right:before {
+        position: absolute;
+        top: 40px;
+    }
+
 
     .footer_content_right_left_title {
         font-size: 20px;
