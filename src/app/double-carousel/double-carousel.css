@@ -7,13 +7,13 @@
 .index_product_list {
   width: 100%;
   height: auto;
-  padding: 102px 0px;
+  padding: 102px 0;
 }
 
 .contentWH {
   width: 80%;
   height: auto;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 .index_product_list:nth-of-type(1) {
@@ -23,7 +23,6 @@
 
 .index_product_list_content {
   width: 100%;
-  height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,7 +56,6 @@
 
 .index_product_list_content_right_sw_bg {
   width: 100%;
-  height: auto;
   overflow: hidden;
   background: #FFFFFF;
   border-radius: 10px;
@@ -65,7 +63,6 @@
 
 .index_product_list_content_right_sw_bg img {
   width: 100%;
-  height: auto;
   display: block;
   border-radius: 8px;
 }
@@ -74,7 +71,7 @@ a {
   text-decoration: none;
 }
 
-/* Swiper (double-carousel specific) */
+/* Swiper Container */
 .double-swiper-container {
   margin: 0 auto;
   position: relative;
@@ -96,40 +93,7 @@ a {
   padding: 0 10px;
 }
 
-.double-swiper-button-next,
-.double-swiper-button-prev {
-  width: 48px;
-  height: 48px;
-  background: #3c3a47;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 50px;
-  color: #FFFFFF;
-  top: 0;
-  transform: translateY(0);
-  border-radius: 6px;
-  cursor: pointer;
-  position: absolute;
-  z-index: 10;
-}
-
-.double-swiper-button-next {
-  right: 0;
-}
-
-.double-swiper-button-prev {
-  left: auto;
-  right: 68px;
-}
-
-.double-swiper-button-next:hover,
-.double-swiper-button-prev:hover {
-  background-color: #c50a27;
-  color: #FFFFFF;
-  transition: background-color 0.2s ease;
-}
-
+/* Swiper Slide Content */
 .swiper-slide h4 {
   font-size: 20px;
   color: #FFFFFF;
@@ -149,8 +113,7 @@ a {
   border: 1px solid #FFFFFF;
   font-size: 16px;
   color: #FFFFFF;
-  margin: 0px auto;
-  margin-top: 18px;
+  margin: 18px auto 0;
   transition: all 0.6s;
 }
 
@@ -160,7 +123,68 @@ a:hover span {
   border: 1px solid #c50a27;
 }
 
-/* Responsive Design */
+/* ─────────────────────────────────────────────
+   ✅ Swiper Navigation Buttons (Both Sets)
+───────────────────────────────────────────── */
+.double-swiper-button-next,
+.double-swiper-button-prev,
+.index_product_list_content_right_sw_right,
+.index_product_list_content_right_sw_left {
+  width: 48px;
+  height: 48px;
+  background: #3c3a47;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #FFFFFF;
+  border-radius: 6px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  transform: translateY(0);
+  z-index: 10;
+}
+
+.double-swiper-button-next {
+  right: 0;
+}
+
+.double-swiper-button-prev {
+  right: 68px;
+  left: auto;
+}
+
+.index_product_list_content_right_sw_right {
+  right: 0;
+}
+
+.index_product_list_content_right_sw_left {
+  right: 68px;
+  left: auto;
+}
+
+/* Ensure Arrows Resize */
+.double-swiper-button-next::after,
+.double-swiper-button-prev::after,
+.index_product_list_content_right_sw_right::after,
+.index_product_list_content_right_sw_left::after {
+  font-size: inherit !important;
+  color: inherit;
+}
+
+/* Hover Effect */
+.double-swiper-button-next:hover,
+.double-swiper-button-prev:hover,
+.index_product_list_content_right_sw_right:hover,
+.index_product_list_content_right_sw_left:hover {
+  background-color: #c50a27;
+  color: #fff;
+  transition: background-color 0.2s ease;
+}
+
+
+/* Max-width: 1200px */
 @media screen and (max-width: 1200px) {
   .contentWH {
     width: 90%;
@@ -185,6 +209,7 @@ a:hover span {
   }
 }
 
+/* Max-width: 997px */
 @media screen and (max-width: 997px) {
   .index_product_list_content {
     flex-direction: column;
@@ -196,13 +221,14 @@ a:hover span {
     width: 100%;
   }
 
-  .index_product_list_content_left {
+  .index_product_list_content_right {
     order: 1;
+    padding-top: 40px;
   }
 
-  .index_product_list_content_right {
-    order: 2;
-    padding-top: 40px;
+  .index_product_list_content_left {
+    margin-bottom: 20px;
+    order: -1;
   }
 
   .swiper-slide {
@@ -214,16 +240,19 @@ a:hover span {
   }
 
   .double-swiper-button-next,
-  .double-swiper-button-prev {
+  .double-swiper-button-prev,
+  .index_product_list_content_right_sw_right,
+  .index_product_list_content_right_sw_left {
     width: 40px;
     height: 40px;
-    font-size: 30px;
+    font-size: 26px;
   }
 }
 
+/* Max-width: 768px */
 @media screen and (max-width: 768px) {
   .index_product_list {
-    padding: 60px 0px;
+    padding: 60px 0;
   }
 
   .index_product_list_content_left h4 {
@@ -244,21 +273,19 @@ a:hover span {
     width: 140px;
     height: 38px;
     font-size: 14px;
-    margin-top: 12px;
-  }
-
-  .double-swiper-container {
-    width: 100%;
   }
 
   .double-swiper-button-next,
-  .double-swiper-button-prev {
-    width: 40px;
-    height: 40px;
-    font-size: 30px;
+  .double-swiper-button-prev,
+  .index_product_list_content_right_sw_right,
+  .index_product_list_content_right_sw_left {
+    width: 32px;
+    height: 32px;
+    font-size: 22px;
   }
 }
 
+/* Max-width: 576px */
 @media screen and (max-width: 576px) {
   .index_product_list_content_left h4 {
     font-size: 22px;
@@ -285,8 +312,18 @@ a:hover span {
   .index_product_list {
     padding: 40px 0;
   }
+
+  .double-swiper-button-next,
+  .double-swiper-button-prev,
+  .index_product_list_content_right_sw_right,
+  .index_product_list_content_right_sw_left {
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+  }
 }
 
+/* Max-width: 480px */
 @media screen and (max-width: 480px) {
   .index_product_list_content_left h4 {
     font-size: 20px;
@@ -307,13 +344,16 @@ a:hover span {
   }
 
   .double-swiper-button-next,
-  .double-swiper-button-prev {
-    width: 36px;
-    height: 36px;
-    font-size: 26px;
+  .double-swiper-button-prev,
+  .index_product_list_content_right_sw_right,
+  .index_product_list_content_right_sw_left {
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
   }
 }
 
+/* Max-width: 360px */
 @media screen and (max-width: 360px) {
   .index_product_list_content_left h4 {
     font-size: 18px;
@@ -335,5 +375,14 @@ a:hover span {
 
   .index_product_list {
     padding: 30px 0;
+  }
+
+  .double-swiper-button-next,
+  .double-swiper-button-prev,
+  .index_product_list_content_right_sw_right,
+  .index_product_list_content_right_sw_left {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
   }
 }

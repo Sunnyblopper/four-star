@@ -12,7 +12,7 @@ export class About {
     const video: HTMLVideoElement | null = document.getElementById('promoVideo') as HTMLVideoElement;
     if (video) {
       video.play();
-      video.setAttribute('controls', 'true');
+      video.removeAttribute('controls');
       const playButton = document.querySelector('.pla') as HTMLElement;
       if (playButton) {
         playButton.style.display = 'none';

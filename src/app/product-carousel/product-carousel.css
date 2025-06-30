@@ -1,4 +1,3 @@
-
 .index_product_box {
     width: 100%;
     height: auto;
@@ -55,24 +54,36 @@
     padding-top: 67px;
 }
 
+/* ✅ UPDATED Swiper button styles */
 .index_product_list_content_right_sw_right,
-.index_product_list_content_right_sw_left {
+.index_product_list_content_right_sw_left,
+.swiper-button-next,
+.swiper-button-prev {
     width: 48px;
     height: 48px;
     background: #3c3a47;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    font-size: 30px;
+    /* Arrow size */
     color: #FFFFFF;
-    top: 0;
-    transform: translateY(0);
     border-radius: 6px;
     cursor: pointer;
     position: absolute;
+    top: 0;
+    transform: translateY(0);
     z-index: 10;
 }
 
+/* ✅ Make arrow scale with font-size */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: inherit !important;
+    color: inherit;
+}
+
+/* ✅ Position */
 .index_product_list_content_right_sw_right {
     right: 0;
 }
@@ -82,13 +93,15 @@
     right: 68px;
 }
 
+/* ✅ Hover effect */
 .index_product_list_content_right_sw_right:hover,
-.index_product_list_content_right_sw_left:hover {
+.index_product_list_content_right_sw_left:hover,
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
     background-color: #c50a27;
     color: #FFFFFF;
     transition: background-color 0.2s ease;
 }
-
 
 .swiper-container {
     margin: 0 auto;
@@ -125,7 +138,7 @@
     display: block;
     border-radius: 8px;
 }
- 
+
 a {
     text-decoration: none;
 }
@@ -140,8 +153,7 @@ a {
 }
 
 .swiper-slide span {
-    display: flex
-;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 175px;
@@ -157,14 +169,13 @@ a {
 
 a:hover span {
     background-color: #c50a27;
-    color: #fff; /* Ya koi dark color */
+    color: #fff;
     border: 1px solid #c50a27;
 }
 
+/* ─────── Responsive Media Queries ─────── */
 
-
-
-/* 1. Medium desktops and smaller */
+/* Medium desktops and smaller */
 @media screen and (max-width: 1200px) {
     .contentWH {
         width: 90%;
@@ -189,7 +200,7 @@ a:hover span {
     }
 }
 
-/* 2. Tablets and small laptops */
+/* Tablets and small laptops */
 @media screen and (max-width: 997px) {
     .index_product_list_content {
         flex-direction: column;
@@ -215,12 +226,13 @@ a:hover span {
 
     .swiper-button-next,
     .swiper-button-prev {
-        width: 40px;
-        height: 40px;
-        font-size: 30px;
+        width: 36px;
+        height: 36px;
+        font-size: 24px;
     }
 }
 
+/* Tablets */
 @media screen and (max-width: 768px) {
     .index_product_list {
         padding: 60px 0px;
@@ -253,12 +265,13 @@ a:hover span {
 
     .swiper-button-next,
     .swiper-button-prev {
-        width: 40px;
-        height: 40px;
-        font-size: 30px;
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
     }
 }
 
+/* Small tablets and large phones */
 @media screen and (max-width: 576px) {
     .index_product_list_content_left h4 {
         font-size: 22px;
@@ -267,7 +280,6 @@ a:hover span {
     .index_product_list_content_left p {
         font-size: 15px;
     }
-    
 
     .swiper-slide {
         padding: 0 3px;
@@ -286,8 +298,16 @@ a:hover span {
     .index_product_list {
         padding: 40px 0;
     }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
 }
 
+/* Mobile phones */
 @media screen and (max-width: 480px) {
     .index_product_list_content_left h4 {
         font-size: 20px;
@@ -309,13 +329,13 @@ a:hover span {
 
     .swiper-button-next,
     .swiper-button-prev {
-        width: 36px;
-        height: 36px;
-        font-size: 26px;
+        width: 26px;
+        height: 26px;
+        font-size: 16px;
     }
 }
 
-/* 6. Ultra-small devices (≤360px) */
+/* Ultra-small devices (≤360px) */
 @media screen and (max-width: 360px) {
     .index_product_list_content_left h4 {
         font-size: 18px;
@@ -337,5 +357,12 @@ a:hover span {
 
     .index_product_list {
         padding: 30px 0;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
     }
 }
