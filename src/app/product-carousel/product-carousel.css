@@ -215,6 +215,9 @@ a:hover span {
     .index_product_list_content_right {
         padding-top: 40px;
     }
+    .index_product_list_content_left {
+        margin-bottom: 20px;
+     }
 
     .swiper-slide {
         padding: 0 5px;
